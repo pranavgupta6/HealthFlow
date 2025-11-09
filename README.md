@@ -3,7 +3,7 @@
 **Theme:** HealthTech Innovation  
 **Project Name:** HealthFlow  
 **Project Link:** [https://medi-connect-1bea7b68.base44.app](https://medi-connect-1bea7b68.base44.app)  
-**Presentation Link:** *(Add your presentation link here)*  
+**Presentation Link:** [https://drive.google.com/file/d/1zE_oOsjLEhxq4fKlpIjR1o1cZCQph-Cj/view](https://drive.google.com/file/d/1zE_oOsjLEhxq4fKlpIjR1o1cZCQph-Cj/view)
 
 ---
 
@@ -29,7 +29,6 @@
 ### 👨‍⚕️ Doctor’s Dashboard
 - **First Login Setup:** When a doctor logs in for the first time, they configure their **forenoon and afternoon shifts**, specifying start and end timings and defining **maximum patient capacity** per shift.  
 - **Shift Check-In:** Upon check-in for a shift, all patients registered for that shift are automatically marked as **“waiting”**, making them visible in the queue.
-- **Real-Time Queue:** The doctor’s dashboard displays a live queue of patients ordered by token number, automatically updated via **Socket.io** as new patients register.
 - **Consultation Workflow:** During a session, the doctor marks a patient as **“in-progress”**, fills out a **digital prescription form** with symptoms, diagnosis, and dynamic medicine entries (name + dosage), and then marks the consultation as **“completed.”**
 - **Post-Consultation Records:** Completed patients remain stored in the backend for future reference and analytics but are hidden from the live queue frontend for a clutter-free interface.
 
@@ -37,14 +36,14 @@
 - **Patient Registration:** Allows the receptionist to register **walk-in patients** with complete demographic and medical details such as name, age, height, weight, gender, blood group, date of birth, and allergies.  
 - **Token Management:** The receptionist assigns patients to a doctor and shift. The system automatically checks the doctor’s **shift timing** and **available capacity** before issuing a token, ensuring no overbooking.
 - **Bed Booking Module:** The receptionist can book beds based on **custom categories** defined by the hospital admin (e.g., General Ward, Private Room, ICU, etc.).  
-- **Live Availability:** Bed availability data is updated in real-time using **Socket.io**, ensuring synchronization between hospital staff and users.  
+- **Live Availability:** Bed availability data is updated in real-time, ensuring synchronization between hospital staff and users.  
 - **Instant Dashboard Updates:** Any new patient registration or bed booking instantly reflects on all relevant dashboards without requiring page reloads.
 
 ### 🧑‍💼 Admin Dashboard
 - **Hospital Registration:** The admin registers a hospital with complete details such as name, address, contact info, and website.  
-- **Custom Domain System:** Each hospital uses a **unique custom domain** (e.g., `@cityhospital.in`) that links all staff accounts under the same hospital.
-- **Staff Management:** Admins can add **doctors, receptionists, and pharmacists** using their hospital domain emails.  
-- **Custom Bed Categories:** Admins define **bed types and total counts** based on hospital infrastructure; these automatically appear in the receptionist’s booking module.
+- **Custom Domain System:** Each hospital uses a **unique custom domain** (e.g., `@cityhospital.in`) that links all staff accounts under the same hospital.  
+- **Staff Management:** Admins can add **doctors and receptionists** using their hospital domain emails.  
+- **Custom Bed Categories:** Admins define **bed types and total counts** based on hospital infrastructure; these automatically appear in the receptionist’s booking module.  
 - **Data Isolation:** All hospital data — doctors, patients, beds, and appointments — is isolated based on the hospital’s domain.
 
 ### 👩‍⚕️ Pharmacist’s Dashboard *(Future Integration)*
@@ -54,7 +53,7 @@
 
 ### 👤 Patient Portal
 - **Browse Hospitals:** Patients can view all registered hospitals displayed as cards, showing hospital info and live bed availability.  
-- **Appointment Booking:** Patients can book appointments directly via the hospital’s page; the system auto-assigns tokens based on doctor’s shift capacity.  
+- **Appointment Booking:** Patients can book appointments directly via the hospital’s page; the system auto-assigns tokens based on the doctor’s shift capacity.  
 - **Prescription Records:** After consultation, patients can access their digital prescriptions under their personal dashboard.  
 
 ---
@@ -79,10 +78,9 @@ This coordinated workflow ensures smooth communication, zero redundancy, and com
 |--------|-------------|
 | **Frontend** | React.js + Tailwind CSS |
 | **Backend** | Node.js + Express.js |
-| **Database** | MongoDB Atlas |
-| **Real-Time Communication** | Socket.io |
-| **Authentication** | JWT (JSON Web Token) |
-| **Deployment** | Render / Base44 |
+| **Database** | Base44 Built-in |
+| **Authentication** | Base44 Authentication |
+| **Deployment** | Base44 |
 | **UI Design Inspiration** | [Koyeb](https://www.koyeb.com) – Clean, modern, light SaaS UI |
 
 ---
@@ -99,6 +97,7 @@ This coordinated workflow ensures smooth communication, zero redundancy, and com
 - E-prescription integration with pharmacy APIs.  
 - SMS/Email notifications for appointment confirmations.  
 - AI-based patient load prediction per shift.  
+- **Emergency Response Integration:** An **Emergency Button** feature will be added, which — when clicked — will automatically detect the patient’s location and **notify the nearest hospital for an ambulance dispatch** using a **Maps API** (such as Google Maps or Mapbox). This will allow real-time routing and emergency prioritization within the hospital network.  
 
 ---
 

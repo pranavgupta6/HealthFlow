@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { base44 } from "@/api/base44Client";
 import { useNavigate } from "react-router-dom";
@@ -165,7 +166,7 @@ export default function AdminPanel() {
             Register Your Hospital
           </h1>
           <p className="text-lg text-gray-600">
-            Fill in the details to add your hospital to HealthFlow
+            Fill in the details to add your hospital to HEALTHFLOW
           </p>
         </div>
 

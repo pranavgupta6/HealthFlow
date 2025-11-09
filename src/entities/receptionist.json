@@ -1,0 +1,31 @@
+{
+  "name": "Receptionist",
+  "type": "object",
+  "properties": {
+    "hospital_id": {
+      "type": "string",
+      "description": "ID of the hospital this receptionist belongs to"
+    },
+    "email": {
+      "type": "string",
+      "description": "Receptionist email for login"
+    },
+    "password": {
+      "type": "string",
+      "description": "Receptionist password"
+    },
+    "name": {
+      "type": "string",
+      "description": "Receptionist name"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Receptionist phone number"
+    }
+  },
+  "required": [
+    "hospital_id",
+    "email",
+    "password"
+  ]
+}

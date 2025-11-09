@@ -1,0 +1,90 @@
+{
+  "name": "Hospital",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Hospital name"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "Hospital image URL"
+    },
+    "description": {
+      "type": "string",
+      "description": "Hospital description"
+    },
+    "address": {
+      "type": "string",
+      "description": "Hospital address"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Hospital phone number"
+    },
+    "email": {
+      "type": "string",
+      "description": "Hospital email"
+    },
+    "location": {
+      "type": "object",
+      "description": "Hospital location coordinates",
+      "properties": {
+        "lat": {
+          "type": "number"
+        },
+        "lng": {
+          "type": "number"
+        }
+      }
+    },
+    "bed_availability": {
+      "type": "object",
+      "description": "Available beds by type",
+      "properties": {
+        "one_bed": {
+          "type": "number",
+          "default": 0,
+          "description": "1-bed rooms available"
+        },
+        "two_bed": {
+          "type": "number",
+          "default": 0,
+          "description": "2-bed rooms available"
+        },
+        "six_bed": {
+          "type": "number",
+          "default": 0,
+          "description": "6-bed rooms available"
+        },
+        "twelve_bed": {
+          "type": "number",
+          "default": 0,
+          "description": "12-bed rooms available"
+        },
+        "general_ward": {
+          "type": "number",
+          "default": 0,
+          "description": "General ward beds available"
+        }
+      },
+      "default": {
+        "one_bed": 0,
+        "two_bed": 0,
+        "six_bed": 0,
+        "twelve_bed": 0,
+        "general_ward": 0
+      }
+    },
+    "admin_email": {
+      "type": "string",
+      "description": "Email of admin who created this hospital"
+    }
+  },
+  "required": [
+    "name",
+    "address",
+    "phone",
+    "email"
+  ]
+}

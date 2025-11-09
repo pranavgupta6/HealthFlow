@@ -1,0 +1,56 @@
+{
+  "name": "Appointment",
+  "type": "object",
+  "properties": {
+    "hospital_id": {
+      "type": "string",
+      "description": "Hospital ID"
+    },
+    "doctor_id": {
+      "type": "string",
+      "description": "Doctor ID"
+    },
+    "patient_email": {
+      "type": "string",
+      "description": "Patient email"
+    },
+    "patient_name": {
+      "type": "string",
+      "description": "Patient name"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Appointment date"
+    },
+    "time": {
+      "type": "string",
+      "description": "Appointment time"
+    },
+    "token_number": {
+      "type": "number",
+      "description": "Token number for appointment"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "scheduled",
+        "completed",
+        "cancelled"
+      ],
+      "default": "scheduled",
+      "description": "Appointment status"
+    },
+    "reason": {
+      "type": "string",
+      "description": "Reason for appointment"
+    }
+  },
+  "required": [
+    "hospital_id",
+    "doctor_id",
+    "patient_email",
+    "date",
+    "time"
+  ]
+}

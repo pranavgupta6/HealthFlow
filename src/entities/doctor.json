@@ -1,0 +1,52 @@
+{
+  "name": "Doctor",
+  "type": "object",
+  "properties": {
+    "hospital_id": {
+      "type": "string",
+      "description": "ID of the hospital this doctor belongs to"
+    },
+    "email": {
+      "type": "string",
+      "description": "Doctor email for login"
+    },
+    "password": {
+      "type": "string",
+      "description": "Doctor password"
+    },
+    "name": {
+      "type": "string",
+      "description": "Doctor name"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "Doctor profile image"
+    },
+    "degrees": {
+      "type": "string",
+      "description": "Doctor degrees/qualifications"
+    },
+    "college": {
+      "type": "string",
+      "description": "Medical college attended"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Doctor phone number"
+    },
+    "specialization": {
+      "type": "string",
+      "description": "Medical specialization"
+    },
+    "profile_completed": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether doctor has completed their profile"
+    }
+  },
+  "required": [
+    "hospital_id",
+    "email",
+    "password"
+  ]
+}

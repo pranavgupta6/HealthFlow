@@ -11,10 +11,10 @@
 
 | Name | Role | Email | Phone | LinkedIn |
 |------|------|--------|--------|-----------|
-| **Meet Batra** (Leader) | Full Stack Developer | [meetbatra56@gmail.com](mailto:meetbatra56@gmail.com) | +91 8287440951 | [LinkedIn](https://www.linkedin.com/in/meet-batra-25612b260) |
-| **Shashwat Tiwari** | Developer | [Shashwat132004@gmail.com](mailto:Shashwat132004@gmail.com) | +91 8076217105 | [LinkedIn](https://www.linkedin.com/in/shashwat-tiwari-504a41298) |
-| **Lakshya Chhabra** | Developer | [lakshyachhabra.2005@gmail.com](mailto:lakshyachhabra.2005@gmail.com) | +91 9354880025 | [LinkedIn](https://www.linkedin.com/in/lakshya-chhabra-1b6117263) |
-| **Pranav Gupta** | Developer | [gpranav859@gmail.com](mailto:gpranav859@gmail.com) | +91 9315220563 | [LinkedIn](https://www.linkedin.com/in/pranavgupta6) |
+| [**Meet Batra**](https://github.com/meetbatra) (Leader) | Full Stack Developer | [meetbatra56@gmail.com](mailto:meetbatra56@gmail.com) | +91 8287440951 | [LinkedIn](https://www.linkedin.com/in/meet-batra-25612b260) |
+| [**Shashwat Tiwari**](https://github.com/Shashwat1306) | Developer | [Shashwat132004@gmail.com](mailto:Shashwat132004@gmail.com) | +91 8076217105 | [LinkedIn](https://www.linkedin.com/in/shashwat-tiwari-504a41298) |
+| [**Lakshya Chhabra**](https://github.com/LAKSHYAA005) | Developer | [lakshyachhabra.2005@gmail.com](mailto:lakshyachhabra.2005@gmail.com) | +91 9354880025 | [LinkedIn](https://www.linkedin.com/in/lakshya-chhabra-1b6117263) |
+| [**Pranav Gupta**](https://github.com/pranavgupta6) | Developer | [gpranav859@gmail.com](mailto:gpranav859@gmail.com) | +91 9315220563 | [LinkedIn](https://www.linkedin.com/in/pranavgupta6) |
 
 ---
 

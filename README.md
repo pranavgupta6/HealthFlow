@@ -1,16 +1,110 @@
-# React + Vite
+# 🏥 HealthFlow  
+### Team Name:- LowGang  
+**Theme:** HealthTech Innovation  
+**Project Name:** HealthFlow  
+**Project Link:** [https://medi-connect-1bea7b68.base44.app](https://medi-connect-1bea7b68.base44.app)  
+**Presentation Link:** *(Add your presentation link here)*  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+## 👥 Team Details
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+| Name | Role | Email | Phone | LinkedIn |
+|------|------|--------|--------|-----------|
+| **Meet Batra** (Leader) | Full Stack Developer | [meetbatra56@gmail.com](mailto:meetbatra56@gmail.com) | +91 8287440951 | [LinkedIn](https://www.linkedin.com/in/meet-batra-25612b260) |
+| **Shashwat Tiwari** | Developer | [Shashwat132004@gmail.com](mailto:Shashwat132004@gmail.com) | +91 8076217105 | [LinkedIn](https://www.linkedin.com/in/shashwat-tiwari-504a41298) |
+| **Lakshya Chhabra** | Developer | [lakshyachhabra.2005@gmail.com](mailto:lakshyachhabra.2005@gmail.com) | +91 9354880025 | [LinkedIn](https://www.linkedin.com/in/lakshya-chhabra-1b6117263) |
+| **Pranav Gupta** | Developer | [gpranav859@gmail.com](mailto:gpranav859@gmail.com) | +91 9315220563 | [LinkedIn](https://www.linkedin.com/in/pranavgupta6) |
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 💡 Overview
 
-## Expanding the ESLint configuration
+**HealthFlow** is a hospital management and real-time patient flow system designed to optimize outpatient departments (OPDs), appointment scheduling, and bed availability across hospitals. It provides seamless interaction between hospital administrators, doctors, receptionists, pharmacists, and patients through a single, unified platform. Built for scalability, HealthFlow integrates **real-time queue updates, custom bed management, and automated shift-based token allocation**, all synchronized through **Socket.io** for instant dashboard updates.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🏗️ Key Features
+
+### 👨‍⚕️ Doctor’s Dashboard
+- **First Login Setup:** When a doctor logs in for the first time, they configure their **forenoon and afternoon shifts**, specifying start and end timings and defining **maximum patient capacity** per shift.  
+- **Shift Check-In:** Upon check-in for a shift, all patients registered for that shift are automatically marked as **“waiting”**, making them visible in the queue.
+- **Real-Time Queue:** The doctor’s dashboard displays a live queue of patients ordered by token number, automatically updated via **Socket.io** as new patients register.
+- **Consultation Workflow:** During a session, the doctor marks a patient as **“in-progress”**, fills out a **digital prescription form** with symptoms, diagnosis, and dynamic medicine entries (name + dosage), and then marks the consultation as **“completed.”**
+- **Post-Consultation Records:** Completed patients remain stored in the backend for future reference and analytics but are hidden from the live queue frontend for a clutter-free interface.
+
+### 🏥 Receptionist’s Dashboard
+- **Patient Registration:** Allows the receptionist to register **walk-in patients** with complete demographic and medical details such as name, age, height, weight, gender, blood group, date of birth, and allergies.  
+- **Token Management:** The receptionist assigns patients to a doctor and shift. The system automatically checks the doctor’s **shift timing** and **available capacity** before issuing a token, ensuring no overbooking.
+- **Bed Booking Module:** The receptionist can book beds based on **custom categories** defined by the hospital admin (e.g., General Ward, Private Room, ICU, etc.).  
+- **Live Availability:** Bed availability data is updated in real-time using **Socket.io**, ensuring synchronization between hospital staff and users.  
+- **Instant Dashboard Updates:** Any new patient registration or bed booking instantly reflects on all relevant dashboards without requiring page reloads.
+
+### 🧑‍💼 Admin Dashboard
+- **Hospital Registration:** The admin registers a hospital with complete details such as name, address, contact info, and website.  
+- **Custom Domain System:** Each hospital uses a **unique custom domain** (e.g., `@cityhospital.in`) that links all staff accounts under the same hospital.
+- **Staff Management:** Admins can add **doctors, receptionists, and pharmacists** using their hospital domain emails.  
+- **Custom Bed Categories:** Admins define **bed types and total counts** based on hospital infrastructure; these automatically appear in the receptionist’s booking module.
+- **Data Isolation:** All hospital data — doctors, patients, beds, and appointments — is isolated based on the hospital’s domain.
+
+### 👩‍⚕️ Pharmacist’s Dashboard *(Future Integration)*
+- Manage inventory of medicines and consumables.  
+- Track batch numbers, expiry dates, and stock levels.  
+- Issue prescriptions directly linked to the doctor’s submitted records.
+
+### 👤 Patient Portal
+- **Browse Hospitals:** Patients can view all registered hospitals displayed as cards, showing hospital info and live bed availability.  
+- **Appointment Booking:** Patients can book appointments directly via the hospital’s page; the system auto-assigns tokens based on doctor’s shift capacity.  
+- **Prescription Records:** After consultation, patients can access their digital prescriptions under their personal dashboard.  
+
+---
+
+## ⚙️ Combined Workflow (Doctor + Receptionist)
+1. **Admin adds a new doctor** with email and password only.  
+2. **Doctor’s first login** → sets shift timings and max patient count for both forenoon and afternoon shifts.  
+3. **Receptionist registers patients** → assigns doctor and shift, and system issues tokens automatically within limits.  
+4. **Doctor checks in** → all assigned patients’ statuses automatically switch to **“waiting.”**  
+5. **Doctor begins consultation** → marks a patient as **“in-progress”** and fills the prescription form.  
+6. **After consultation** → patient’s status becomes **“completed,”** remaining stored for records but hidden from the live queue.  
+7. **Receptionist books beds** as needed from available categories, updated instantly across the system.  
+8. All updates — token assignments, queue changes, check-ins, and bed bookings — are **broadcast in real time** to all relevant dashboards through **Socket.io**.  
+
+This coordinated workflow ensures smooth communication, zero redundancy, and complete transparency between hospital staff and patients.
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer | Technology |
+|--------|-------------|
+| **Frontend** | React.js + Tailwind CSS |
+| **Backend** | Node.js + Express.js |
+| **Database** | MongoDB Atlas |
+| **Real-Time Communication** | Socket.io |
+| **Authentication** | JWT (JSON Web Token) |
+| **Deployment** | Render / Base44 |
+| **UI Design Inspiration** | [Koyeb](https://www.koyeb.com) – Clean, modern, light SaaS UI |
+
+---
+
+## 🔄 Real-Time Features
+- Live synchronization of queues, bed status, and appointments via **Socket.io**.  
+- Automatic shift detection and token allocation.  
+- Auto-update of dashboards when a doctor checks in, a patient registers, or a bed is booked.  
+
+---
+
+## 🚀 Future Enhancements
+- Role-based analytics dashboard for admins (bed occupancy, patient trends, doctor efficiency).  
+- E-prescription integration with pharmacy APIs.  
+- SMS/Email notifications for appointment confirmations.  
+- AI-based patient load prediction per shift.  
+
+---
+
+## 🧾 Summary
+**HealthFlow** provides an end-to-end hospital management solution that connects patients, doctors, and hospital staff in real time. With customizable shift scheduling, token automation, live bed management, and digital prescriptions, it transforms how hospitals handle OPDs and inpatient flow — making healthcare smarter, faster, and more efficient.
+
+---
+
+**Developed with ❤️ by Team LowGang**
